@@ -1,0 +1,6 @@
+app:
+  name: ""
+server:
+  port: ":8080"
+mongodb:
+  URI: "mongodb://localhost:27017"
