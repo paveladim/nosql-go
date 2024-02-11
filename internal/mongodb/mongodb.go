@@ -16,10 +16,13 @@ type Mongo struct {
 }
 
 func NewMongo(logger *zap.Logger, config *Config) *Mongo {
+	fmt.Println("URI MONGO")
+	fmt.Println(config.Uri)
 	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(config.Uri))
 
 	if err != nil {
 		logger.Warn(fmt.Sprintf("Cannot connect to Mongo"))
+		fmt.Println("CANNOT CONNECT TO MONGO")
 		return nil
 	}
 

@@ -7,5 +7,5 @@ import (
 
 func RegisterRoutes(server *server.Server, ep *endpoints.Endpoints) {
 	server.Server.GET("/", ep.Hello)
-	server.Server.GET("/all, ep.GetAllClients")
+	server.Server.GET("/all", ep.GetAllClients)
 }
